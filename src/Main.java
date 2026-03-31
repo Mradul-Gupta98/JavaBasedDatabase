@@ -1,5 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("MyJavaDatabase started...");
+        Database db = new Database();
+        Table users = db.createTable("users");
+
+        users.insert(1, "Rahul");
+        users.insert(2, "Aman");
+
+        System.out.println("Data inserted!");
     }
 }
